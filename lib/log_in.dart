@@ -8,8 +8,11 @@ class LogIn extends StatefulWidget {
   _LogInState createState() => _LogInState();
 }
 // for global variables
+late String email;
 String _email= "jannatsuha@gmail.com";
 String _password= "123456";
+TextEditingController emailCont= TextEditingController();
+TextEditingController passCont= TextEditingController();
 
 final _formKey= GlobalKey<FormState>();
 
@@ -40,6 +43,7 @@ class _LogInState extends State<LogIn> {
                   height: 18,
                 ),
                 TextFormField(
+                  controller: emailCont,
                   validator: (text){
                     if(text == null || text.isEmpty){
                       return "The Field is Empty";
@@ -72,6 +76,7 @@ class _LogInState extends State<LogIn> {
                 ),
                 SizedBox(height: 20,),
                 TextFormField(
+                  controller: passCont,
                   validator: (text){
                     if(text == null || text.isEmpty){
                       return "The Field is Empty";
@@ -110,6 +115,7 @@ class _LogInState extends State<LogIn> {
                     primary: AllColors.appThemeColor
                   ),
                     onPressed: (){
+                    email= emailCont.text;
                     if(_formKey.currentState!.validate()){
                       Navigator.push(context,
                       MaterialPageRoute(builder:(context)
