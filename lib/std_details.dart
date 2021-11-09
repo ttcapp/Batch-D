@@ -25,10 +25,18 @@ class _StdDetailsState extends State<StdDetails> {
             Image.asset(widget.img),
             Padding(
               padding: const EdgeInsets.all(18.0),
-              child: Text(widget.stdObj.name,
-              style: TextStyle(
-                color: Colors.green,fontSize: 30
-              ),),
+              child: Row(
+                children: [
+                  Text("Name: ",
+                    style: TextStyle(
+                        color: Colors.green,fontSize: 30
+                    ),),
+                  Text(widget.stdObj.name,
+                  style: TextStyle(
+                    color: Colors.green,fontSize: 30
+                  ),),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.all(18.0),
