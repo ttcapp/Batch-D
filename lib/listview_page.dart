@@ -1,3 +1,4 @@
+import 'package:batch_d_demo/model/student_model.dart';
 import 'package:batch_d_demo/std_details.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -43,6 +44,26 @@ final List<String> imgList = [
   'https://images.unsplash.com/photo-1508704019882-f9cf40e475b4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8c6e5e3aba713b17aa1fe71ab4f0ae5b&auto=format&fit=crop&w=1352&q=80',
   'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a0c8d632e977f94e5d312d9893258f59&auto=format&fit=crop&w=1355&q=80'
 ];
+
+StudentDetails std1= StudentDetails
+  ("Masum", "1001", "0147638746", "Ghonapara", "25");
+StudentDetails std2= StudentDetails
+  ("Masud", "1002", "0178347449", "abc", "20");
+StudentDetails std3= StudentDetails
+  ("Jakaria", "1003", "0187638746", "def", "25");
+StudentDetails std4= StudentDetails
+  ("Jasim", "1004", "0147638746", "ghi", "25");
+StudentDetails std5= StudentDetails
+  ("Imran", "1005", "0147638746", "jkl", "25");
+StudentDetails std6= StudentDetails
+  ("Bishnu", "1006", "0147638746", "mon", "25");
+StudentDetails std7= StudentDetails
+  ("Chinmoy", "1007", "0147638746", "pqr", "25");
+
+List<StudentDetails> stdDetailsList=[
+  std1,std2,std3,std4,std5,std6,std7
+];
+
 class _ListViewPageState extends State<ListViewPage> {
   @override
   Widget build(BuildContext context) {
@@ -78,7 +99,8 @@ class _ListViewPageState extends State<ListViewPage> {
                     onPressed: (){
                       Navigator.push(context,
                           MaterialPageRoute(builder:
-                          (context)=>StdDetails( text: stdDetails[index],
+                          (context)=>StdDetails(
+                            stdObj: stdDetailsList[index],
                             img: stdImg[index],)));
                     },
                       child: Text(stdName[index])
