@@ -70,10 +70,14 @@ class _MyHomePageState extends State<MyHomePage> {
                   MaterialPageRoute(builder: (context) => ThirdPage()),
                 );
               }
-              else if(title=="Saved Posts")
+              else if(title=="List Show")
 
               {
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder:
+                      (context) => ListViewPage()),
+                );
               }
               else if(title=="LogOut")
               {

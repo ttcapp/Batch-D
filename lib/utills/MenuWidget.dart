@@ -10,7 +10,7 @@ class MenuWidget extends StatelessWidget {
     double _heightOnly=MediaQuery.of(context).size.height;
     double _widthOnly=MediaQuery.of(context).size.width;
     return Container(
-      color: Colors.white,
+      color: Colors.orange.shade100,
       padding: const EdgeInsets.only(top: 30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -30,19 +30,35 @@ class MenuWidget extends StatelessWidget {
             height: 20,
           ),
           Text(
-            'Jannat Suha',
+            'Creator',
             style: TextStyle(
                 color: Colors.teal,
                 fontWeight: FontWeight.bold,
-                fontSize: _widthOnly*0.06,
+                fontSize: _widthOnly*0.04,
                 fontFamily: 'BalsamiqSans',),
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  right: 40.0),
+              child: Text(
+                'Jannat Suha',
+                textAlign: TextAlign.right,
+                style: TextStyle(
+                  color: Colors.teal,
+                  fontWeight: FontWeight.bold,
+                  fontSize: _widthOnly*0.06,
+                  fontFamily: 'BalsamiqSans',),
+              ),
+            ),
           ),
           SizedBox(
             height: 20,
           ),
           sliderItem('Friend Lists', Icons.people),
           sliderItem('Notification', Icons.notifications_active),
-          sliderItem('Saved Posts', Icons.save_alt),
+          sliderItem('List Show', Icons.save_alt),
           sliderItem('Setting', Icons.settings),
           sliderItem('LogOut', Icons.arrow_back_ios)
         ],
