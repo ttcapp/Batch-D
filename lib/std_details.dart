@@ -22,6 +22,7 @@ class _StdDetailsState extends State<StdDetails> {
       body: Center(
         child: Column(
           children: [
+
             Image.asset(widget.img),
             Padding(
               padding: const EdgeInsets.all(18.0),

@@ -1,3 +1,4 @@
+import 'package:batch_d_demo/design.dart';
 import 'package:batch_d_demo/log_in.dart';
 import 'package:batch_d_demo/my_home_page.dart';
 import 'package:batch_d_demo/second_page.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
-      home: LogIn(),
+      home: DesignPage(),
 
     );
   }
